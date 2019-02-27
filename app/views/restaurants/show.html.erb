@@ -1,0 +1,7 @@
+<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.category %></h2>
+<p><strong>Phone Number: </strong><%= @restaurant.phone_number %></p>
+<p><strong>Address: </strong><%= @restaurant.address %></p>
+<p><strong>Reviews:</strong></p>
+<%= render 'reviews/reviews_list', restaurant: @restaurant %>
+<%= render 'reviews/form', locals: { restaurant: @restaurant, review: @review } %>

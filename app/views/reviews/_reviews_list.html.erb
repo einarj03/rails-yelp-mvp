@@ -1,0 +1,9 @@
+<ul>
+  <% restaurant.reviews.each do |review| %>
+    <li>
+      Rating: <%= review.rating %><br>
+      <%= review.content %>
+    </li>
+  <% end %>
+  <li><%= link_to "Add a review", new_restaurant_review_path(restaurant)%></li>
+</ul>
